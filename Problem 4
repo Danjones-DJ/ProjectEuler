@@ -1,0 +1,13 @@
+largest_palindrome = 0
+factors = (0, 0)
+
+for i in range(100, 1000):
+    for j in range(i, 1000):  # Start j from i to avoid duplicates
+        value = i * j
+        if value > largest_palindrome:  # Only check if it's potentially larger
+            value_str = str(value)
+            if value_str == value_str[::-1]:
+                largest_palindrome = value
+                factors = (i, j)
+
+print(f'The Largest palindrome is {largest_palindrome}, it's factors are {factors[0]} and {factors[1]}')
