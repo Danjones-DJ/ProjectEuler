@@ -1,0 +1,13 @@
+def sum_squares(limit: int) -> int:
+    return (limit *(limit + 1) * (2 * limit + 1)) // 6
+
+def square_sums(limit: int) -> int:
+    sum_to_square = (limit * (limit + 1)) // 2
+    return sum_to_square ** 2
+
+
+def difference_between(n: int) -> int:
+    return square_sums(n) - sum_squares(n)
+
+n = 100
+print(f'Difference is {difference_between(n)}')
