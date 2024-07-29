@@ -1,0 +1,5 @@
+def sum_multiples_of_three_and_five(limit):
+    return sum(x for x in range(limit) if x % 3 == 0 or x % 5 == 0)
+
+
+print(sum_multiples_of_three_and_five(1000))
