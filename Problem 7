@@ -1,0 +1,21 @@
+def nth_prime(value):
+    primes_found = 1 # 2
+    next_prime = 3
+    while primes_found < value:
+        is_prime = True
+        factor = 3
+        while factor * factor <= next_prime:
+            if next_prime % factor == 0:
+                is_prime = False
+                break
+            else:
+                factor += 2
+        if is_prime:
+            primes_found += 1
+            if primes_found == value:
+                return next_prime
+        next_prime += 2
+
+n = 10001
+result = nth_prime(n)
+print(f'The {n}th prime number is {result}')
